@@ -1,4 +1,7 @@
 <?php
+    if(file_exists("./assets/tempStore/lol")){
+        unlink("./assets/tempStore/lol");
+    }
     foreach(glob("./assets/tempStore/*") as $img){
         $newPath1 = "assets/Thumbnails/";
         $newPath2 = "assets/Images/";
@@ -40,4 +43,4 @@
             unlink($img);
         }
     }
-?>
+    fopen("./assets/tempStore/lol", "w");
