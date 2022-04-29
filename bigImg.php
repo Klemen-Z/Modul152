@@ -12,7 +12,7 @@
             $imgN = explode(".", $img);
             $imgN = explode("/", $imgN[1]);
             if($imgN[3] == $_GET["img"]){
-                echo "<img src='$img' alt='Image Failed to Load'>";
+                echo "<img src='$img' alt='Image Failed to Load' style='margin-left: 50%; margin-top: 50%;'>";
             }
         }
         ?>
