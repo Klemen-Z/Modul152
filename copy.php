@@ -11,14 +11,17 @@
         $imgN = explode("/", $imgN[1]);
         list($width, $height) = getimagesize($img);
 
+        $newHeight1 = round($height*(200/$width));
+        $newHeight2 = round($height*(500/$width));
+
         if($type == "jpeg"){
-            $thumb = imagecreatetruecolor(200, 150);
-            $image = imagecreatetruecolor(500, 400);
+            $thumb = imagecreatetruecolor(200, $newHeight1);
+            $image = imagecreatetruecolor(500, $newHeight2);
             $source = imagecreatefromjpeg($img);
             $ext = '.jpeg';
         } elseif ($type == "png"){
-            $thumb = imagecreatetruecolor(200, 150);
-            $image = imagecreatetruecolor(500, 400);
+            $thumb = imagecreatetruecolor(200, $newHeight1);
+            $image = imagecreatetruecolor(500, $newHeight2);
             $source = imagecreatefrompng($img);
             $ext = '.png';
         }
