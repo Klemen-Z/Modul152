@@ -10,8 +10,7 @@
         <?php
             include("copy.php");
             foreach(glob("./assets/Thumbnails/*") as $img){
-                $imgN = explode(".", $img);
-                $imgN = explode("/", $imgN[1]);
+                $imgN = explode("/", $img);
                 echo "<a href='bigImg.php?img=$imgN[3]'><img src='$img' alt='Image Failed to Load'></a>";
             }
         ?>
