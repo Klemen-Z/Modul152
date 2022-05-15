@@ -6,14 +6,15 @@
         <title>Video Gallery</title>
     </head>
     <body>
-        <nav><a href="index.php"> Homepage </a> <a href="pictures.php"> Image Gallery </a> <a href="GIFs.php"> GIF Gallery </a></nav>
+        <nav class="navbar"><a href="index.php"> Homepage </a> <a href="pictures.php"> Image Gallery </a> <a href="GIFs.php"> GIF Gallery </a></nav>
         <?php
-            foreach(glob("./assets/Videos/*") as $vid){
-                list($width, $height) = getimagesize($vid);
-                $newHeight = $height*(500/$width);
+            foreach(glob("./assets/Videos/*.mp4") as $vid){
+                $vidN = explode(".", $vid);
+                $type = $vidN[2];
+                $vidN = explode("/", $vidN[1]);
                 echo "
-<video controls width='$width' height='$newHeight' muted>
-<source src='$vid' type='vid/mp4'>
+<video class='content' controls width='400' height='250'>
+<source class='content' src='assets/Videos/$vid[3].mp4' type='vid/mp4'>
 </video>
 ";
             }

@@ -6,10 +6,10 @@
         <title>GIF Gallery</title>
     </head>
     <body>
-        <nav><a href="index.php"> Homepage </a> <a href="pictures.php"> Image Gallery </a> <a href="videos.php"> Video gallery </a></nav>
+        <nav class="navbar"><a href="index.php"> Homepage </a> <a href="pictures.php"> Image Gallery </a> <a href="videos.php"> Video gallery </a></nav>
         <?php
             foreach(glob("./assets/GIFs/*.gif") as $gif){
-                echo "<img src='$gif' alt='GIF Failed to Load'>";
+                echo "<img class='content' src='$gif' width='400' height='auto' alt='GIF Failed to Load'>";
             }
         ?>
     </body>
