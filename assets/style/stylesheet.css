@@ -19,6 +19,10 @@
     border: .1vh solid ghostwhite;
     background-color: #131325;
 }
+.logo{
+    margin-top: 25vh;
+    margin-left: 55vh;
+}
 .content{
     padding: .1vh;
     margin: 1vh;
