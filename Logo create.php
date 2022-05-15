@@ -1,20 +1,24 @@
 <?php
-    $image = imagecreatefromjpeg('assets/logos/commuFrog.jpeg');
-    $addedImg = imagecreatefrompng('assets/logos/GetImage.png');
-    $size = 20;
-    $addedImgSize = imagescale($addedImg, imagesx($addedImg) / $size, imagesy($addedImg) / $size);
+$image = imagecreatefromjpeg("assets/logos/commuFrog.jpeg");
 
-    $font = 'arial.ttf';
-    $lightBoi = 255;
-    $color = imagecolorallocate($image, $lightBoi, $lightBoi, $lightBoi);
-    list($width, $height) = getimagesize('assets/logos/commuFrog.jpeg');
+$logoImage = imagecreatefrompng("assets/logos/GetImage.png");
+imagealphablending($logoImage, true);
 
-    imagettftext($image, 100, 0, $width/2, $height/2+50, $color, $font, 'Klemen');
-    imagettftext($image, 100, 0, $width/2, $height/2-50, $color, $font, 'I2B');
+$imageWidth=imagesx($image);
+$imageHeight=imagesy($image);
 
-    imagecopy($image, $addedImgSize, $width/2, $height/2, 0, 0, imagesx($addedImgSize), imagesy($addedImgSize));
+$logoWidth=imagesx($logoImage);
+$logoHeight=imagesy($logoImage);
 
-    header('Content-Type: image/jpg');
+$color = imagecolorallocate($image, 0, 0, 0);
+$font = "assets/font/PTSerif-Regular.ttf";
 
-    imagejpeg($image);
-    imagedestroy($image);
+imagecopy($image, $logoImage, $imageWidth/2-50, $imageHeight/2, 0, 0, $logoWidth, $logoHeight);
+imagettftext($image, 50, 0, $imageWidth/2-50, $imageHeight/2+100, $color, $font, 'I2b');
+imagettftext($image, 50, 0, $imageWidth/2-110, $imageHeight/2-25, $color, $font, 'Klemen');
+
+header("Content-type: image/jpeg");
+imagejpeg($image);
+
+imageDestroy($image);
+imageDestroy($logoImage);
