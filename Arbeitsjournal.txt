@@ -1,0 +1,29 @@
+26.4.2022:
+Alle dateien gemacht so wie auch ordner die ich nutzen werde
+29.4.2022:
+Jetzt wenn jemand auf einen Image clickt sehen sie der vergrösserte version allein.
+4.5.2022:
+Den Image verkleinerung gefixed so das den Bild nicht komplett schwarz ist
+10.5.2022:
+Den Logo/watermark Aufgabe probiert, hat nicht so gut funktioniert
+15.5.2022:
+Alles CSS gemacht, so wie auch denn watermark gefixed, so das es normal funktioniert.
+
+Reflexion:
+Punkt 2:
+Der Bild hat probleme mit dem script wo es die ganze zeit ein schwarzes Bild ausgibt anstatt meines, habe ein altes Tutorial geschaut
+Punkt 3:
+Keine Probleme
+Punkt 4:
+Der 500 pixel grosses Bild war komplett schwarz habe deswegen den script so umgeschrieben das es bisschen weniger von GD library nutzt.
+Punkt 5:
+Keine Probleme
+Punkt 6:
+Nur ein kleines missverständnis mit dem Path zum Video
+
+Multimedia benutzt:
+- video/mp4
+- image/jpeg
+- image/jpg
+- image/png
+- animated image/gif
